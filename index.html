@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dice Roll</h1>
+        <div class="dice" id="dice">?</div>
+        <button onclick="rollDice()" class="roll-button">Roll Dice</button>
+        <span class="spacebar-text">(Press Spacebar)</span>
+        <input type="checkbox" id="soundCheckbox" checked onchange="toggleSound()">
+        <label for="soundCheckbox">Sound</label>
+        <br>
+        <label for="animationType">Animation:</label>
+        <select id="animationType" onchange="changeAnimationType()">
+            <option value="shake">Shake</option>
+            <option value="spin">Spin</option>
+            <option value="flip">Flip</option>
+        </select>
+        <p id="result"></p>
+    </div>
+
+    <audio id="diceSound">
+        <source src="Assets/rolling_dice_sound.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+  
+</html>
